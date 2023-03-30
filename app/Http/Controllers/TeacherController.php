@@ -74,8 +74,9 @@ class TeacherController extends Controller
     public function show()
     {
         $data = Teacher::where('id', 6)->with('studentsData')->get();
+        $data2 = Teacher::where('id', 6)->with('studentUserData')->get();
 
-        dd($data);
+        dd($data, $data2);
     }
     public function viewAssignedStudents(Request $request)
     {
