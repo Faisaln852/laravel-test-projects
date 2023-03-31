@@ -15,20 +15,20 @@ class TeacherStudent extends Model
         'teacher_id'
     ];
 
-    // public function studentName(){
-    //     return $this->belongsTo(Student::class,'student_id','id');
-    // }
+
     public function studentUser()
     {
-        return $this->hasOneThrough(Student::class,User::class,'student_id','id','user_id');
+        return $this->hasOneThrough(User::class,Student::class,'id','id','student_id','user_id');
     }
 
-    public function teacherName(){
-        return $this->belongsTo(Teacher::class,'teacher_id','id');
-    }
-    // public function studentName(){
-    //     return $this->hasOneThrough(::class,'')
+    // public function teacherName(){
+    //     return $this->belongsTo(Teacher::class,'teacher_id','id');
     // }
+    public function teacherUser()
+    {
+        return $this->hasOneThrough(User::class,Teacher::class,'id','id','teacher_id','user_id');
+    }
+
 
 
 }

@@ -9,7 +9,7 @@
                 @foreach($student->teachers as $key=> $teacher)
                 <tr>
                     <td>
-                        {{$teacher->teacherName->user->name}}
+                        {{$teacher->teacherUser->name}}
                     </td>
                 </tr>
                 @endforeach

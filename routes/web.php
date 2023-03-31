@@ -31,4 +31,3 @@ Route::post('view-assigned-students',[TeacherController::class,'viewAssignedStud
 Route::resource('student',StudentController::class);
 Route::get('select-students',[StudentController::class,'selectStudents'])->name('select.students');
 Route::post('view-student-teachers',[StudentController::class,'viewStudentTeachers'])->name('view.student.teachers');
-Route::get('testing', [TeacherController::class, 'show']);
